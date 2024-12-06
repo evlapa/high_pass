@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>High Pass</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="svg/favicon.svg">
+  </head>
+  <body>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=6b1cb3db-e3da-4799-9e5a-6092ce69f515&amp;lang=ru_RU"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <header class="header" id="header">
+      <div class="container grid">
+        <div class="header__logo"><a href="#" aria-hidden="true" aria-label="Логотип компании">
+            <svg>
+              <use xlink:href="images/sprite.svg#Logo"></use>
+            </svg></a></div>
+        <div class="header__menu">
+          <div class="header__burger-btn" tabindex="0" aria-label="Раскрыть меню"><span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span></div><span class="header__close-burger-btn" tabindex="0" aria-label="Закрыть меню"><span class="btn-line"></span><span class="btn-line"></span></span>
+          <ul class="header__list list-reset" aria-label="Главное меню">
+            <li class="header__item"><a class="header__link" href="#hero">О студии</a></li>
+            <li class="header__item"><a class="header__link" href="#projects">Наши проекты</a></li>
+            <li class="header__item"><a class="header__link" href="#">Услуги</a></li>
+            <li class="header__item"><a class="header__link" href="#">Мастер-классы</a></li>
+            <li class="header__item"><a class="header__link" href="#contacts">Контакты</a></li>
+          </ul><a class="header__phone" href="tel:+749542423532" aria-label="Нажмите, чтобы позвонить нам по номеру +749542423532">
+            <svg>
+              <use xlink:href="images/sprite.svg#mdi_call"></use>
+            </svg><span>+7&nbsp;495 424-23-532</span></a>
+        </div>
+        <div class="header__search">
+          <button class="header__btn" tabindex="0" aria-label="Открыть поле поиска">
+            <svg class="header__search-icon">
+              <use xlink:href="images/sprite.svg#Group_2"></use>
+            </svg>
+          </button>
+          <label><span class="input-content">Что будем искать?</span>
+            <input class="header__input invisible" type="text" placeholder="Что будем искать?"><span class="header__open-close-btn" tabindex="0" aria-label="Очистить поле поиска"><span class="btn-line"></span><span class="btn-line"></span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="hero">
+        <div class="container grid">
+          <div class="hero__main-topic">
+            <h1 class="hero__header header-reset"><span class="hero__additional-text">Мастер-класс от&nbsp;Игоря Робова</span><span class="hero__main-text">Неоновый фотосет 2.0<span>
+                  <time datetime="2023-07-07 20:00">7&nbsp;июля 20:00</time></span></span></h1><a class="coloredBtn" href="#">Узнать больше</a>
+          </div>
+          <div class="hero__other-topics">
+            <h2 class="hero__addit-header header-reset">Работы участников предыдущего мастер-класса</h2>
+            <div class="hero__pics grid list-reset">
+              <picture class="hero__pic">
+                <source srcset="images/576/pic2.jpg" media="(max-width: 576px)">
+                <source srcset="images/900/pic2.jpg" media="(max-width: 900px)">
+                <source srcset="images/1040/pic2.jpg" media="(max-width: 1040px)"><img src="images/1920/pic2.jpg" alt="Picture 1" loading="lazy">
+              </picture>
+              <picture class="hero__pic">
+                <source srcset="images/576/pic3.jpg" media="(max-width: 576px)">
+                <source srcset="images/900/pic3.jpg" media="(max-width: 900px)">
+                <source srcset="images/1040/pic3.jpg" media="(max-width: 1040px)"><img src="images/1920/pic3.jpg" alt="Picture 2" loading="lazy">
+              </picture>
+              <picture class="hero__pic">
+                <source srcset="images/576/pic4.jpg" media="(max-width: 576px)">
+                <source srcset="images/900/pic4.jpg" media="(max-width: 900px)">
+                <source srcset="images/1040/pic4.jpg" media="(max-width: 1040px)"><img src="images/1920/pic4.jpg" alt="Picture 3" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__descr">
+            <h2 class="about__title header-reset">О&nbsp;студии</h2>
+            <p class="about__text p-reset">В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от&nbsp;нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и&nbsp;ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и&nbsp;кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и&nbsp;нарушающими общечеловеческие нормы этики.</p>
+          </div>
+          <div class="about__subscribe">
+            <div class="about__subscribe-content"><span>Подписаться на&nbsp;рассылку</span>
+              <form class="about__form" action="#" method="GET" id="about__form">
+                <label><span class="input-content">Введите е-мейл</span>
+                  <input class="about__input" type="text" placeholder="Email">
+                </label>
+                <label><span class="input-content">Кнопка "Отправить"</span>
+                  <input class="about__sendBtn coloredBtn" type="submit">
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="container">
+          <h2 class="projects__title header-reset">Наши проекты</h2>
+          <div class="gallery grid">
+            <article class="projects__large-article"><span class="projects__tag">#fuji</span>
+              <picture>
+                <source srcset="images/576/pic9.jpg" media="(max-width: 576px)">
+                <source srcset="images/900/pic9.jpg" media="(max-width: 900px)">
+                <source srcset="images/1040/pic9.jpg" media="(max-width: 1040px)"><img src="images/1920/pic9.jpg" alt="Picture 6" loading="lazy">
+              </picture>
+              <div class="large-article-content"><span class="projects__date">
+                  <time datetime="2023-04-09">9 апреля</time></span>
+                <h2 class="header-reset projects__title">Cемантический разбор</h2>
+                <p class="p-reset projects__descr projects__descr1920">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+                <p class="p-reset projects__descr projects__descr1040">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+                <p class="p-reset projects__descr projects__descr900">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+                <p class="p-reset projects__descr projects__descr576">В рамках спецификации современных стандартов, интерактивные прототипы</p><a class="projects__link" href="#" aria-label="Узнать больше о проекте Cемантический разбор">О&nbsp;проекте</a>
+              </div>
+            </article>
+            <article class="projects__large-article"><span class="projects__tag">#проектзабвение</span>
+              <picture>
+                <source srcset="images/576/pic10.jpg" media="(max-width: 576px)">
+                <source srcset="images/900/pic10.jpg" media="(max-width: 900px)">
+                <source srcset="images/1040/pic10.jpg" media="(max-width: 1040px)"><img src="images/1920/pic10.jpg" alt="Picture 7" loading="lazy">
+              </picture>
+              <div class="large-article-content"><span class="projects__date">
+                  <time datetime="2023-03-20">20 марта</time></span>
+                <h2 class="header-reset projects__title">Забвение</h2>
+                <p class="p-reset projects__descr projects__descr1920">Играет важную роль в формировании глубокомысленных рассуждений</p>
+                <p class="p-reset projects__descr projects__descr1040">Играет важную роль в формировании глубокомысленных рассуждений</p>
+                <p class="p-reset projects__descr projects__descr900">Играет важную роль в формировании глубокомысленных рассуждений</p>
+                <p class="p-reset projects__descr projects__descr576">Играет важную роль в формировании глубокомысленных рассуждений</p><a class="projects__link" href="#" aria-label="Узнать больше о проекте Забвение">О&nbsp;проекте</a>
+              </div>
+            </article>
+            <article class="projects__small-article">
+              <label tabindex="0"><span class="projects__tag" aria-label="Узнать больше о проекте #пейзаж">#пейзаж</span>
+                <picture aria-hidden="true">
+                  <source srcset="images/576/pic6.jpg" media="(max-width: 576px)">
+                  <source srcset="images/900/pic6.jpg" media="(max-width: 900px)">
+                  <source srcset="images/1040/pic6.jpg" media="(max-width: 1040px)"><img src="images/1920/pic6.jpg" alt="Picture 1" loading="lazy">
+                </picture>
+                <h2 class="header-reset">Article's header</h2>
+                <p class="p-reset projects__descr projects__descr1920">Синтетически, смешаны с не уникальными данными до степени…</p>
+                <p class="p-reset projects__descr projects__descr1040">Синтетически, смешаны с не уникальными…</p>
+                <p class="p-reset projects__descr projects__descr900">Синтетически, смешаны с не уникальными данными до степени…</p>
+                <p class="p-reset projects__descr projects__descr576">Синтетически, смешаны с не уникальными данными до степени…</p><span class="projects__date">
+                  <time datetime="2023-07-16">16 июля</time></span>
+              </label>
+            </article>
+            <article class="projects__small-article">
+              <label tabindex="0"><span class="projects__tag" aria-label="Узнать больше о проекте #портрет">#портрет</span>
+                <picture aria-hidden="true">
+                  <source srcset="images/576/pic7.jpg" media="(max-width: 576px)">
+                  <source srcset="images/900/pic7.jpg" media="(max-width: 900px)">
+                  <source srcset="images/1040/pic7.jpg" media="(max-width: 1040px)"><img src="images/1920/pic7.jpg" alt="Picture 2" loading="lazy">
+                </picture>
+                <h2 class="header-reset">Article's header</h2>
+                <p class="p-reset projects__descr projects__descr1920">В своём стремлении улучшить опыт мы упускаем, что явные...</p>
+                <p class="p-reset projects__descr projects__descr1040">В своём стремлении улучшить опыт мы…</p>
+                <p class="p-reset projects__descr projects__descr900">В своём стремлении улучшить опыт мы упускаем, что явные…</p>
+                <p class="p-reset projects__descr projects__descr576">В своём стремлении улучшить опыт мы упускаем, что явные…</p><span class="projects__date">
+                  <time datetime="2023-05-28">28 мая</time></span>
+              </label>
+            </article>
+            <article class="projects__small-article">
+              <label tabindex="0"><span class="projects__tag" aria-label="Узнать больше о проекте #предмет">#предмет</span>
+                <picture aria-hidden="true">
+                  <source srcset="images/576/pic8.jpg" media="(max-width: 576px)">
+                  <source srcset="images/900/pic8.jpg" media="(max-width: 900px)">
+                  <source srcset="images/1040/pic8.jpg" media="(max-width: 1040px)"><img src="images/1920/pic8.jpg" alt="Picture 3" loading="lazy">
+                </picture>
+                <h2 class="header-reset">Article's header</h2>
+                <p class="p-reset projects__descr projects__descr1920">Равным образом, высокое качество позиционных…</p>
+                <p class="p-reset projects__descr projects__descr1040">Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада</p>
+                <p class="p-reset projects__descr projects__descr900">Равным образом, высокое качество позиционных…</p>
+                <p class="p-reset projects__descr projects__descr576">Равным образом, высокое качество позиционных…</p><span class="projects__date">
+                  <time datetime="2023-05-14">14 мая</time></span>
+              </label>
+            </article>
+            <article class="projects__middle-article">
+              <label tabindex="0"><span class="projects__tag" aria-label="Узнать больше о проекте #ретушь">#ретушь</span>
+                <picture aria-hidden="true">
+                  <source srcset="images/576/pic11.jpg" media="(max-width: 576px)">
+                  <source srcset="images/900/pic11.jpg" media="(max-width: 900px)">
+                  <source srcset="images/1040/pic11.jpg" media="(max-width: 1040px)"><img src="images/1920/pic11.jpg" alt="Picture 4" loading="lazy">
+                </picture>
+                <h2 class="header-reset">Article's header</h2>
+                <p class="p-reset projects__descr projects__descr1920">Как принято считать, многие известные личности и по сей день остаются уделом либералов…</p>
+                <p class="p-reset projects__descr projects__descr1040">Как принято считать, многие известные личности и по сей день остаются уделом либералов…</p>
+                <p class="p-reset projects__descr projects__descr900">Как принято считать, многие известные личности и по сей день остаются уделом либералов…</p>
+                <p class="p-reset projects__descr projects__descr576">Как принято считать, многие известные личности и по сей день остаются уделом либералов…</p><span class="projects__date">
+                  <time datetime="2023-03-09">9 марта</time></span>
+              </label>
+            </article>
+            <article class="projects__middle-article">
+              <label tabindex="0"><span class="projects__tag" aria-label="Узнать больше о проекте #портрет">#портрет</span>
+                <picture aria-hidden="true">
+                  <source srcset="images/576/pic12.jpg" media="(max-width: 576px)">
+                  <source srcset="images/900/pic12.jpg" media="(max-width: 900px)">
+                  <source srcset="images/1040/pic12.jpg" media="(max-width: 1040px)"><img src="images/1920/pic12.jpg" alt="Picture 5" loading="lazy">
+                </picture>
+                <h2 class="header-reset">Article's header</h2>
+                <p class="p-reset projects__descr projects__descr1920">С учётом сложившейся международной обстановки, новая модель организационной…</p>
+                <p class="p-reset projects__descr projects__descr1040">С учётом сложившейся международной обстановки, новая модель организационной…</p>
+                <p class="p-reset projects__descr projects__descr900">С учётом сложившейся международной обстановки, новая модель организационной…</p>
+                <p class="p-reset projects__descr projects__descr576">С учётом сложившейся международной обстановки, новая модель организационной…</p><span class="projects__date">
+                  <time datetime="2023-03-01">1 марта</time></span>
+              </label>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <h2 class="container contacts__title header-reset">Контакты</h2>
+        <div class="container contacts__content">
+          <div class="contacts__details">
+            <div class="contacts__map" id="map" style="width: 850px; height: 460px"></div>
+            <div class="contacts__address"><span class="contacts__open-close-btn" tabindex="0" aria-label="Свернуть блок с адресом"><span class="btn-line"></span><span class="btn-line"></span></span>
+              <h2 class="contacts__details-title header-reset">Студия &laquo;High pass&raquo;</h2>
+              <address class="contacts__address-details">107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82<a class="contacts__phone" href="tel:+749542423532" aria-label="Нажмите, чтобы позвонить нам по номеру +749542423532">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#mdi_call"></use>
+                  </svg><span>+7&nbsp;495 424-23-532</span></a></address>
+            </div>
+          </div>
+          <div class="contacts__form">
+            <h2 class="contacts__form-title header-reset">Оставить заявку</h2>
+            <p class="contacts__descr p-reset">Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съёмки или другого мероприятия</p>
+            <form class="contacts__inputs" id="contacts__inputs" action="#" method="GET">
+              <label><span class="input-content">Введите имя</span>
+                <input class="contacts__name" type="text" placeholder="Имя">
+              </label>
+              <label><span class="input-content">Введите е-мейл</span>
+                <input class="contacts__email" type="text" placeholder="Email">
+              </label>
+              <label><span class="input-content">Введите комментарий</span>
+                <textarea class="contacts__comment" placeholder="Комментарий"></textarea>
+              </label>
+              <label><span class="input-content">Нажмите, чтобы отправить</span>
+                <input class="contacts__send-btn" type="submit">
+              </label>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__part1"><a class="footer__logo" href="#" aria-label="Вернуться наверх">
+            <svg>
+              <use xlink:href="images/sprite.svg#Logo"></use>
+            </svg></a><span>Фотостудия High pass&#169; 2018&ndash;2020</span></div>
+        <div class="footer__part2"><span>Которая из&nbsp;моих фотографий самая любимая? Та, которую я&nbsp;собираюсь снять завтра.</span><span>&copy;&nbsp;Имоджен Каннингем</span></div>
+        <div class="footer__part3"><span>Больше интересного:</span>
+          <div class="social"><a class="odnoklassniki" href="#" aria-label="Посетите нас на Одноклассниках">
+              <svg class="footer__social-icon">
+                <use xlink:href="images/svg/social.svg"></use>
+              </svg></a><a class="vk" href="#" aria-label="посетите нас ВКонтакте">
+              <svg class="footer__social-icon">
+                <use xlink:href="images/svg/vk.svg"></use>
+              </svg></a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

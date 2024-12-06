@@ -1,0 +1,192 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title High Pass
+    link(rel="stylesheet" href="styles/normalize.css")
+    link(rel="stylesheet" href="styles/style.css")
+    link(rel="icon" href="svg/favicon.svg")
+
+
+  body
+    script(defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js")
+    script(defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js")
+    script(defer src="https://api-maps.yandex.ru/2.1/?apikey=6b1cb3db-e3da-4799-9e5a-6092ce69f515&lang=ru_RU")
+    script(defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js")
+    script(defer src="js/script.js")
+    - var srcsets = [576, 900, 1040];
+    - var menu = [{name: 'О студии', section: '#hero'}, {name: 'Наши проекты', section: '#projects'}, {name: 'Услуги', section: '#'}, {name: 'Мастер-классы', section: '#'}, {name: 'Контакты', section: '#contacts'}];
+    - var gallery1 = [{src: "images/1920/pic2.jpg", media1040: "images/1040/pic2.jpg", media900: "images/900/pic2.jpg", media576: "images/576/pic2.jpg", alt: "Picture 1"}, {src: "images/1920/pic3.jpg", media1040: "images/1040/pic3.jpg", media900: "images/900/pic3.jpg", media576: "images/576/pic3.jpg", alt: "Picture 2"}, {src: "images/1920/pic4.jpg", media1040: "images/1040/pic4.jpg", media900: "images/900/pic4.jpg", media576: "images/576/pic4.jpg", alt: "Picture 3"}];
+    - var aboutPics = {src: "images/1920/pic5.jpg", media1040: "#", media900: "#", media576: "#", alt: "Picture 1"};
+    - var largeProjects = [{pic: 'images/1920/pic9.jpg', media1040: "images/1040/pic9.jpg", media900: "images/900/pic9.jpg", media576: "images/576/pic9.jpg", alt: "Picture 6", header: 'Cемантический разбор', descr1920: 'В рамках спецификации современных стандартов, интерактивные прототипы', descr1040: 'В рамках спецификации современных стандартов, интерактивные прототипы', descr900: 'В рамках спецификации современных стандартов, интерактивные прототипы', descr576: 'В рамках спецификации современных стандартов, интерактивные прототипы', date: '2023-04-09', day: '9 апреля', tag: '#fuji'}, {pic: 'images/1920/pic10.jpg', media1040: "images/1040/pic10.jpg", media900: "images/900/pic10.jpg", media576: "images/576/pic10.jpg", alt: "Picture 7", header: 'Забвение', descr1920: 'Играет важную роль в формировании глубокомысленных рассуждений', descr1040: 'Играет важную роль в формировании глубокомысленных рассуждений', descr900: 'Играет важную роль в формировании глубокомысленных рассуждений', descr576: 'Играет важную роль в формировании глубокомысленных рассуждений', date: '2023-03-20', day: '20 марта', tag: '#проектзабвение'}];
+    - var middleProjects = [{pic: 'images/1920/pic11.jpg', media1040: "images/1040/pic11.jpg", media900: "images/900/pic11.jpg", media576: "images/576/pic11.jpg", alt: "Picture 4", descr1920: 'Как принято считать, многие известные личности и по сей день остаются уделом либералов…', descr1040: 'Как принято считать, многие известные личности и по сей день остаются уделом либералов…', descr900: 'Как принято считать, многие известные личности и по сей день остаются уделом либералов…', descr576: 'Как принято считать, многие известные личности и по сей день остаются уделом либералов…', date: '2023-03-09', day: '9 марта', tag: '#ретушь'}, {pic: 'images/1920/pic12.jpg', media1040: "images/1040/pic12.jpg", media900: "images/900/pic12.jpg", media576: "images/576/pic12.jpg", alt: "Picture 5", descr1920: 'С учётом сложившейся международной обстановки, новая модель организационной…', descr1040: 'С учётом сложившейся международной обстановки, новая модель организационной…', descr900: 'С учётом сложившейся международной обстановки, новая модель организационной…', descr576: 'С учётом сложившейся международной обстановки, новая модель организационной…', date: '2023-03-01', day: '1 марта', tag: '#портрет'}];
+    - var smallProjects = [{pic: 'images/1920/pic6.jpg', media1040: "images/1040/pic6.jpg", media900: "images/900/pic6.jpg", media576: "images/576/pic6.jpg", alt: "Picture 1", descr1920: 'Синтетически, смешаны с не уникальными данными до степени…', descr1040: 'Синтетически, смешаны с не уникальными…', descr900: 'Синтетически, смешаны с не уникальными данными до степени…', descr576: 'Синтетически, смешаны с не уникальными данными до степени…', date: '2023-07-16', day: '16 июля', tag: '#пейзаж'}, {pic: 'images/1920/pic7.jpg', media1040: "images/1040/pic7.jpg", media900: "images/900/pic7.jpg", media576: "images/576/pic7.jpg", alt: "Picture 2", descr1920: 'В своём стремлении улучшить опыт мы упускаем, что явные...', descr1040: 'В своём стремлении улучшить опыт мы…', descr900: 'В своём стремлении улучшить опыт мы упускаем, что явные…', descr576: 'В своём стремлении улучшить опыт мы упускаем, что явные…', date: '2023-05-28', day: '28 мая', tag: '#портрет'}, {pic: 'images/1920/pic8.jpg', media1040: "images/1040/pic8.jpg", media900: "images/900/pic8.jpg", media576: "images/576/pic8.jpg", alt: "Picture 3", descr1920: 'Равным образом, высокое качество позиционных…', descr1040: 'Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада', descr900: 'Равным образом, высокое качество позиционных…', descr576: 'Равным образом, высокое качество позиционных…', date: '2023-05-14', day: '14 мая', tag: '#предмет'}]
+    header#header.header
+      .container.grid
+        .header__logo
+          a(href="#" aria-hidden="true" aria-label="Логотип компании")
+            svg
+              use(xlink:href="images/sprite.svg#Logo")
+        .header__menu
+          .header__burger-btn(tabindex="0" aria-label="Раскрыть меню")
+            span.burger-line
+            span.burger-line
+            span.burger-line
+          span.header__close-burger-btn(tabindex="0" aria-label="Закрыть меню")
+            span.btn-line
+            span.btn-line
+          ul.header__list.list-reset(aria-label="Главное меню")
+            each item in menu
+              li.header__item
+                a.header__link(href= item.section)= item.name
+          a.header__phone(href="tel:+749542423532" aria-label="Нажмите, чтобы позвонить нам по номеру +749542423532")
+                  svg
+                    use(xlink:href='images/sprite.svg#mdi_call')
+                  span +7&nbsp;495 424-23-532
+        .header__search
+          button.header__btn(tabindex="0" aria-label="Открыть поле поиска")
+            svg.header__search-icon
+              use(xlink:href="images/sprite.svg#Group_2")
+          label
+            span.input-content Что будем искать?
+            input(type="text" placeholder="Что будем искать?").header__input.invisible
+            span.header__open-close-btn(tabindex="0" aria-label="Очистить поле поиска")
+                  span.btn-line
+                  span.btn-line
+    main
+      section#hero.hero
+        .container.grid
+          .hero__main-topic
+            h1.hero__header.header-reset
+              span.hero__additional-text Мастер-класс от&nbsp;Игоря Робова
+              span.hero__main-text Неоновый фотосет 2.0
+                span
+                  time(datetime="2023-07-07 20:00") 7&nbsp;июля 20:00
+            a.coloredBtn(href="#") Узнать больше
+          .hero__other-topics
+            h2.hero__addit-header.header-reset Работы участников предыдущего мастер-класса
+            .hero__pics.grid.list-reset
+              each item in gallery1
+                picture.hero__pic
+                  each srcset in srcsets
+                    source(srcset =item[`media${srcset}`] media=`(max-width: ${srcset}px)`)
+                  img(src=item.src alt=item.alt loading="lazy")
+
+      section#about.about
+        .container
+          .about__descr
+            h2.about__title.header-reset О&nbsp;студии
+            p.about__text.p-reset В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от&nbsp;нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и&nbsp;ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и&nbsp;кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и&nbsp;нарушающими общечеловеческие нормы этики.
+          .about__subscribe
+            .about__subscribe-content
+              span Подписаться на&nbsp;рассылку
+              form(action="#" method="GET")#about__form.about__form
+                label
+                  span.input-content Введите е-мейл
+                  input.about__input(type="text" placeholder="Email")
+                label
+                  span.input-content Кнопка "Отправить"
+                  input(type="submit").about__sendBtn.coloredBtn
+      section#projects.projects
+        .container
+          h2.projects__title.header-reset Наши проекты
+          .gallery.grid
+            each item in largeProjects
+              article.projects__large-article
+                span.projects__tag=`${item.tag}`
+                picture
+                  each srcset in srcsets
+                    source(srcset=item[`media${srcset}`] media=`(max-width: ${srcset}px)`)
+                  img(src=item.pic alt=item.alt loading="lazy")
+                .large-article-content
+                  span.projects__date
+                    time(datetime=`${item.date}`)=`${item.day}`
+                  h2.header-reset.projects__title=`${item.header}`
+                  p.p-reset.projects__descr.projects__descr1920=`${item.descr1920}`
+                  p.p-reset.projects__descr.projects__descr1040=`${item.descr1040}`
+                  p.p-reset.projects__descr.projects__descr900=`${item.descr900}`
+                  p.p-reset.projects__descr.projects__descr576=`${item.descr576}`
+                  a.projects__link(href="#" aria-label=`Узнать больше о проекте ${item.header}`) О&nbsp;проекте
+            each item in smallProjects
+                article.projects__small-article
+                  label(tabindex="0")
+                    span(aria-label=`Узнать больше о проекте ${item.tag}`).projects__tag=`${item.tag}`
+                    picture(aria-hidden='true')
+                      each srcset in srcsets
+                        source(srcset=item[`media${srcset}`] media=`(max-width: ${srcset}px)`)
+                      img(src=item.pic alt=item.alt loading="lazy")
+                    h2.header-reset Article's header
+                    p.p-reset.projects__descr.projects__descr1920=`${item.descr1920}`
+                    p.p-reset.projects__descr.projects__descr1040=`${item.descr1040}`
+                    p.p-reset.projects__descr.projects__descr900=`${item.descr900}`
+                    p.p-reset.projects__descr.projects__descr576=`${item.descr576}`
+                    span.projects__date
+                      time(datetime=`${item.date}`)=`${item.day}`
+            each item in middleProjects
+                article.projects__middle-article
+                  label(tabindex="0")
+                    span(aria-label=`Узнать больше о проекте ${item.tag}`).projects__tag=`${item.tag}`
+                    picture(aria-hidden='true')
+                      each srcset in srcsets
+                        source(srcset=item[`media${srcset}`] media=`(max-width: ${srcset}px)`)
+                      img(src=item.pic alt=item.alt loading="lazy")
+                    h2.header-reset Article's header
+                    p.p-reset.projects__descr.projects__descr1920=`${item.descr1920}`
+                    p.p-reset.projects__descr.projects__descr1040=`${item.descr1040}`
+                    p.p-reset.projects__descr.projects__descr900=`${item.descr900}`
+                    p.p-reset.projects__descr.projects__descr576=`${item.descr576}`
+                    span.projects__date
+                      time(datetime=`${item.date}`)=`${item.day}`
+      section#contacts.contacts
+        h2.container.contacts__title.header-reset Контакты
+        .container.contacts__content
+          .contacts__details
+            #map(style="width: 850px; height: 460px").contacts__map
+            .contacts__address
+              span.contacts__open-close-btn(tabindex=0 aria-label="Свернуть блок с адресом")
+                span.btn-line
+                span.btn-line
+              h2.contacts__details-title.header-reset Студия &laquo;High pass&raquo;
+              address.contacts__address-details 107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82
+                a.contacts__phone(href="tel:+749542423532" aria-label="Нажмите, чтобы позвонить нам по номеру +749542423532")
+                  svg
+                    use(xlink:href='images/sprite.svg#mdi_call')
+                  span +7&nbsp;495 424-23-532
+          .contacts__form
+            h2.contacts__form-title.header-reset Оставить заявку
+            p.contacts__descr.p-reset Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съёмки или другого мероприятия
+            form#contacts__inputs.contacts__inputs(action="#", method="GET")
+              label
+                span.input-content Введите имя
+                input.contacts__name(type="text" placeholder="Имя")
+              label
+                span.input-content Введите е-мейл
+                input.contacts__email(type="text" placeholder="Email")
+              label
+                span.input-content Введите комментарий
+                textarea.contacts__comment(placeholder="Комментарий")
+              label
+                span.input-content Нажмите, чтобы отправить
+                input(type="submit").contacts__send-btn
+    footer.footer
+      .container
+        .footer__part1
+          a.footer__logo(href="#" aria-label="Вернуться наверх")
+            svg
+              use(xlink:href='images/sprite.svg#Logo')
+          span Фотостудия High pass&#169; 2018&ndash;2020
+        .footer__part2
+          span Которая из&nbsp;моих фотографий самая любимая? Та, которую я&nbsp;собираюсь снять завтра.
+          span &copy;&nbsp;Имоджен Каннингем
+        .footer__part3
+          span Больше интересного:
+          .social
+            a(href="#" aria-label="Посетите нас на Одноклассниках").odnoklassniki
+              svg.footer__social-icon
+                use(xlink:href="images/svg/social.svg")
+            a(href="#" aria-label="посетите нас ВКонтакте").vk
+              svg.footer__social-icon
+                use(xlink:href="images/svg/vk.svg")
+
+
