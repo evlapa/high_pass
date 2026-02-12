@@ -483,7 +483,7 @@ header .header__search .header__btn .header__search-icon:active {
   justify-content: flex-end;
   width: 48.9%;
   height: 368px;
-  background-image: url(images/1920/pic5.jpg);
+  background-image: url(../images/1920/pic5.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
