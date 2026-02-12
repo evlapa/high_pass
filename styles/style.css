@@ -647,7 +647,7 @@ header .header__search .header__btn .header__search-icon:active {
 }
 #projects .projects__date::before {
   content: "";
-  background-image: url("svg/calendar.svg");
+  background-image: url("../images/svg/calendar.svg");
   display: inline-block;
   width: 14px;
   height: 14px;
